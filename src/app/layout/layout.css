@@ -1,0 +1,77 @@
+.app__footer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+
+
+/* Floating Button */
+.layout__floating_btn {
+    position: fixed;
+	width: 96px;
+	height: 96px;
+	bottom: 40px;
+	right: 40px;
+	background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	color: #FFF;
+	border-radius: 50px;
+	text-align: center;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+    animation: floatingAnimation 2s infinite;
+}
+
+.layout__floating_img {
+    width: 48px;
+    height: 48px;
+    self-align: center;
+}
+
+
+
+@keyframes floatingAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    .layout__floating_btn {
+        width: 80px;
+        height: 80px;
+    }
+
+    .layout__floating_btn_img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 572px) {
+    .layout__floating_btn {
+        width: 64px;
+        height: 64px;
+    }
+
+    .layout__floating_img {
+        width: 32px;
+        height: 32px;
+    }
+}

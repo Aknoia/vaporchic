@@ -1,1 +1,378 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+:root {
+    --primary-color: #005D91;
+    --primary-color-light: rgb(51, 142, 207, 0.3);
+    --primary-color-light2: rgb(51, 142, 207, 0.8);
+
+    --official-color: rgb(0, 60, 94);
+    --official-color-light: rgb(0, 60, 94, 0.8);
+    --official-color-light2: rgb(0, 60, 94, 0.6);
+
+    --secondary-color: rgb(247, 179, 41);
+    --secondary-color-dark: rgb(237, 154, 57);
+
+
+    --green-color: #3F784C;
+    --red-color: rgb(207, 31, 37);
+    --background-color: #F8F8F8;
+    --text-color: #F7F7F9;
+
+
+    --breakpoint-xxl: 1920px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-l: 992px;
+    --breakpoint-m: 768px;
+    --breakpoint-s: 575px;
+    --breakpoint-xs: 320px;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("/assets/fonts/GolosText-VariableFont_wght.ttf") format("opentype");
+}
+
+html {
+    color: var(--text-color);
+    font-size: 14px;
+    font-family: "Golos Text", sans-serif ;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body { 
+    height: 100%; 
+    margin: 0px;
+}
+
+
+body { 
+    margin: 0; 
+    font-family: "Golos Text", "Helvetica Neue", sans-serif; 
+    overflow-y: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+
+/* Navbar Dropdown Menu */
+.app__navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar__menu {
+    padding: 0px !important;
+    border: 1px solid var(--secondary-color);
+    border-radius: 12px !important;
+    background-color: var(--primary-color) !important;
+}
+
+.navbar__menu_button {
+    background-color: var(--primary-color) !important;
+}
+
+.navbar__menu_button:hover {
+    background-color: var(--official-color) !important;
+}
+
+.navbar__menu_icon {
+    color: var(--secondary-color) !important;
+}
+
+.navbar__menu_label {
+    color: var(--text-color) !important;
+}
+
+
+/* Text Styles */
+.highlight_txt {
+    color: var(--secondary-color);
+    transition: background-color 1s linear;
+}
+
+/* Bold Blue */
+.highlight_txt2 {
+    font-weight: bold;
+    color: var(--primary-color);
+    transition: background-color 1s linear;
+}
+
+/* Bold Yellow */
+.highlight_txt3 {
+    font-weight: bold;
+    color: var(--secondary-color);
+    transition: background-color 1s linear;
+}
+
+.highlight_txt4 {
+    color: var(--secondary-color-dark);
+    transition: background-color 1s linear;
+}
+
+.highlight_txt_green {
+    color: var(--green-color) !important;
+    transition: background-color 1s linear;
+}
+
+.highlight_txt_red {
+    color: var(--red-color) !important;
+    transition: background-color 1s linear;
+}
+
+.underline {
+    text-decoration: underline var(--primary-color) 2px !important;
+}
+
+.underline_green {
+    text-decoration: underline var(--green-color) 2px !important;
+}
+
+.blue_border {
+    text-shadow: -1px -1px 0 var(--primary-color), 
+                  1px -1px 0 var(--primary-color), 
+                 -1px 1px 0 var(--primary-color), 
+                  1px 1px 0 var(--primary-color);
+}
+
+
+/* Sidebar */
+mat-sidenav {
+    border-right: 2px solid var(--primary-color) !important;
+}
+
+mat-list-item .mdc-list-item__primary-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar__item {
+    color: var(--primary-color);
+    font-size: 1.5rem;   
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.sidebar__item .mdc-list-item__primary-text {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.sidebar__item .mat-mdc-list-item-unscoped-content {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+
+
+
+/* TabBar */
+.mdc-tab__text-label {
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.mdc-tab__text-label:hover {
+    color: var(--secondary-color) !important;
+}
+
+.mdc-tab__text-label:focus {
+    color: var(--secondary-color) !important;
+}
+
+.mdc-tab--active, .mdc-tab-indicator--active  {
+    color: var(--secondary-color) !important;
+}
+
+.cdk-focused, .cdk.mouse-focused {
+    color: var(--secondary-color) !important;
+}
+
+.mat-mdc-tab-label-container {
+    color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.mat-mdc-tab-group {
+    width: 100%;
+}
+
+.mat-drawer-content {
+    overflow: visible !important;
+}
+
+mat-sidenav-container {
+    overflow: visible !important;
+}
+
+
+/* Bottoni Default */
+.card_btn {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+
+    background-color: var(--primary-color-light);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.card_btn:hover {
+    opacity: 0.7
+}
+
+
+.content {
+    height: 100%;
+}
+
+app-homepage {
+    height: 100%;   
+    display: flex;
+}
+
+mat-sidenav-container {
+    height: fit-content;
+}
+
+
+@media (max-width: 768px) {
+    mat-sidenav-container {
+        height: fit-content;
+    }
+}
+
+
+/* Utilizzati per margini box contatti */ 
+.margin_left {
+    margin-left: 50px;
+}
+
+.margin_right {
+    margin-right: 50px;
+}
+
+
+
+[contenteditable="true"] {
+  caret-color: transparent;
+}
+
+
+
+/* Header Expansion Panel */
+.mat-content {
+    height: 100%;
+}
+
+.mat-expansion-panel-spacing {
+    margin: 4rem 0 !important;
+}
+
+mat-expansion-panel.mat-expanded {
+    border: 1px solid var(--official-color) !important;
+}
+
+.mat-expansion-panel-content-wrapper {
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    
+    border-right: 3px solid var(--primary-color) !important;
+    border-left: 3px solid var(--primary-color) !important;
+    border-bottom: 3px solid var(--primary-color) !important;
+}
+
+.animate_fade_left {
+    animation: fadeLeft 0.6s ease-out forwards;
+}
+
+.animate_fade_up {
+    animation: fadeUp 0.6 ease-out forwards;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(120vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    
+    transform: translateY(20vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Animations */
+@keyframes AnimateDirective {
+    0% {
+        right: 1000px;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+
+@keyframes HomeTitleBoxAnimation {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 70%;
+    }
+}
+
+@keyframes HomeTitleAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

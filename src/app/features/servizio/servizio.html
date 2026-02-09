@@ -1,0 +1,356 @@
+<div class="servizio__body">
+
+
+    <section class="servizio__title_section">
+        
+        <div class="servizio__title_wrapper">
+
+            @if (servizio.background.includes('mp4')) {
+                <video style="width: 100%;max-height: 45vh;" controls>
+                    <source  src="{{servizio.background}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            } @else {
+                <img class="servizio__background" [src]="servizio.background">
+            }
+            
+
+            <div class="servizio__title_color">
+                <h1 class="servizio__title" [innerHTML]="servizio.title"></h1>
+            </div>
+        </div>
+        
+        <article class="servizio__section">
+            <div class="servizio__section_title_wrapper">
+                <img class="servizio__section_img" [src]="servizio.section1.img">
+
+                <div class="servizio__section_wrapper_txt">
+                    <p class="servizio__section_title" [innerHTML]="servizio.section1.title"></p>
+                    <p class="servizio__section_description" [innerHTML]="servizio.section1.description"></p>
+                </div>
+            </div>
+            
+
+            <p class="servizio__section_undertext" [innerHTML]="servizio.section1.underText"></p>
+
+        </article>
+
+
+
+        <article class="servizio__section">
+            <div class="servizio__section_title_wrapper servizio__section_title_wrapper_reverse">
+                <img class="servizio__section_img servizio__section_img2" [src]="servizio.section2.img">
+
+                <div class="servizio__section_wrapper_txt">
+                    <p class="servizio__section_title servizio__section_title2" [innerHTML]="servizio.section2.title"></p>
+                    <p class="servizio__section_description servizio__section_description2" [innerHTML]="servizio.section2.description"></p>
+                </div>
+            </div>
+            
+
+            <p class="servizio__section_undertext" [innerHTML]="servizio.section2.underText"></p>
+
+        </article>
+
+
+        @if (servizio.section4) {
+            <article class="servizio__section">
+                <div class="servizio__section_title_wrapper">
+                    <img class="servizio__section_img" [src]="servizio.section4.img">
+
+                    <div class="servizio__section_wrapper_txt">
+                        <p class="servizio__section_title" [innerHTML]="servizio.section4.title"></p>
+                        <p class="servizio__section_description" [innerHTML]="servizio.section4.description"></p>
+                    </div>
+                </div>
+                
+
+                <p class="servizio__section_undertext" [innerHTML]="servizio.section4.underText"></p>
+
+            </article>
+        }
+
+
+
+        <article class="servizio__section3">
+            <p class="servizio__section3_title" [innerHTML]="servizio.section3.title"></p>
+            <p class="servizio__section3_description" [innerHTML]="servizio.section3.description"></p>
+
+            <p class="servizio__table_title" [innerHTML]="servizio.tableTitle"></p>
+            <ul class="servizio__table">
+                @for (entry of servizio.table; track entry) {
+                    <li class="servizio__table_entry">{{entry}}</li>
+                }
+            </ul>
+        </article>
+
+
+        <article class="servizio__plans_wrapper">
+
+            @if (servizio.preventivo) {
+                <p class="servizio__preventivo">Contattaci per Avere un Preventivo!</p>
+            }
+
+            @for (plan of servizio.prices; track plan) {
+                <div class="servizio__plan_box">
+
+                    @if (plan.icon) {
+                        <img class="servizio__plan_icon" src="assets/icons/mansardato.png" alt="Camper Mansardato"/>
+                    }
+
+                    <p class="servizio__plan_name">{{plan.name}}</p>
+
+                    <div class="servizio__plan_divider"></div>
+
+                    <p class="servizio__plan_cost">A Partire da<br><span class="highlight_txt servizio__plan_price">{{plan.prices}}</span></p>
+                </div>
+            }
+        </article>
+
+
+
+        @if (servizio.tabellaAuto == true) {
+            <!-- Tabella Prezzi Desktop -->
+            <article class="servizio_article_tabella_auto">
+                <div class="servizio__tabella_prezzi_auto">
+
+                    <div class="servizio__checkbox_border">
+                        <!-- Vuota -->
+                    </div>
+                    
+                    
+                    <!-- Nomi Piani -->
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <p class="servizio__article_description">Lavaggio Basic Chic</p>
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <p class="servizio__article_description">Lavaggio Plus Chic</p>
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <p class="servizio__article_description">Lavaggio Deluxe Chic</p>
+                    </div>
+
+
+                    <!-- Riga 1-->
+                    <div class="servizio__checkbox_border">
+                        <p class="servizio__article_description">Pulizia ed Aspirazione Dettagliata Interni</p>
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" checked contenteditable="false" >
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" checked contenteditable="false" >
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" checked contenteditable="false" >
+                    </div>
+
+
+                    <!-- Riga 3-->
+                    <div class="servizio__checkbox_border">
+                        <p class="servizio__article_description">Lavaggio Esterno con Prodotti Waterless</p>
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" checked contenteditable="false" >
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" contenteditable="false" >
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" contenteditable="false" >
+                    </div>
+
+
+                    <div class="servizio__checkbox_border">
+                        <p class="servizio__article_description">Lavaggio Esterno ad Acqua</p>
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" contenteditable="false" >
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" checked contenteditable="false" >
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" checked contenteditable="false" >
+                    </div>
+
+
+                    <!-- Riga 4-->
+                    <div class="servizio__checkbox_border">
+                        <p class="servizio__article_description">Lavaggio condotti A/C e Sanificazione ad Ozono</p>
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" contenteditable="false" >
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" checked contenteditable="false" >
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" checked contenteditable="false" >
+                    </div>
+
+
+                    <!-- Riga 5-->
+                    <div class="servizio__checkbox_border">
+                        <p class="servizio__article_description">Lavaggio Sedili e Moquette</p>
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" contenteditable="false" >
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" contenteditable="false" >
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" checked contenteditable="false" >
+                    </div>
+
+
+                    <!-- Riga 6 -->
+                    <div class="servizio__checkbox_border">
+                        <p class="servizio__article_description">Punto Acqua <span style="color: var(--red-color);font-weight: bold;">Necessario</span></p>
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox"  contenteditable="false" >
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" checked contenteditable="false" >
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper servizio__checkbox_border">
+                        <input class="services__checkbox" type="checkbox" checked contenteditable="false" >
+                    </div>
+
+
+                    <!-- Riga 7 -->
+                    <div>
+                        <p class="servizio__article_description">Prezzo</p>
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper">
+                        <p class="servizio__article_description">A Partire da<br><span class="highlight_txt4">50€</span></p>
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper">
+                        <p class="servizio__article_description">A Partire da<br><span class="highlight_txt4">80€</span></p>
+                    </div>
+
+                    <div class="servizio__checkbox_wrapper">
+                        <p class="servizio__article_description">A Partire da<br><span class="highlight_txt4">150€</span></p>
+                    </div>
+                    
+                </div>
+
+
+                <!-- Lista Prezzi Mobile -->
+                <div class="servizio__table_auto_mobile">
+
+                    <div class="services__card_mobile">
+                        <p class=" services__card_title">Lavaggio Basic Chic</p>
+
+                        <p class=" services__card_descr">Pulizia ed Aspirazione Dettagliata Interni</p>
+                        <p class=" services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio Esterno con Prodotti Waterless</p>
+
+                        
+                        <div class="explosion2">
+                            <p class="   services__prezzo_mobile">A Partire da<br><span class="highlight_txt_green">50€</span></p>
+                        </div>
+                        
+                        
+                    </div>
+
+
+                    <div class="services__card_mobile">
+                        <p class=" services__card_title">Lavaggio Plus Chic</p>
+
+                        <p class=" services__card_descr">Pulizia ed Aspirazione Dettagliata Interni</p>
+                        <p class=" services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio Esterno con Prodotti Waterless</p>
+                        <p class=" services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio condotti A/C e Sanificazione ad Ozono</p>
+
+                        <div class="services__attention_box" style="margin-top: 1rem;margin-bottom: 2rem;">
+                            <img class="services__attention_icon" src="assets/icons/warning.png">
+                            <p class=" services__article_warnig_materassi" style="margin-top: 0.5rem;">Necessario Punto acqua</p>
+                        </div>
+
+                        <div class="explosion2">
+                            <p class="   services__prezzo_mobile">A Partire da<br><span class="highlight_txt_green">80€</span></p>
+                        </div>
+                    </div>
+
+                    <div class="services__card_mobile">
+                        <p class=" services__card_title">Lavaggio Deluxe Chic</p>
+
+                        <p class=" services__card_descr">Pulizia ed Aspirazione Dettagliata Interni</p>
+                        <p class=" services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio Esterno con Prodotti Waterless</p>
+                        <p class=" services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio condotti A/C e Sanificazione ad Ozono</p>
+                        <p class=" services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio Sedili e Moquette</p>
+
+                        <div class="services__attention_box" style="margin-top: 1rem;margin-bottom: 2rem;">
+                            <img class="services__attention_icon" src="assets/icons/warning.png">
+                            <p class=" services__article_warnig_materassi" style="margin-top: 0.5rem;">Necessario Punto acqua</p>
+                        </div>
+                        
+
+                        <div class="explosion2">
+                            <p class="   services__prezzo_mobile">A Partire da<br><span class="highlight_txt_green">150€</span></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        }
+
+
+
+
+        <div class="servizio__media_wrapper">            
+            @if ((servizio.video1.length)) {
+                <video [src]="servizio.video1" class="servizio__video" controls>
+                    <source type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            }
+
+            @if ((servizio.video2.length)) {
+                <video [src]="servizio.video2" class="servizio__video" controls>
+                    <source type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            }
+
+
+            @if ((servizio.video3)) {
+                <video [src]="servizio.video3" class="servizio__video" controls>
+                    <source type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            }
+
+            @if ((servizio.video4)) {
+                <video [src]="servizio.video4" class="servizio__video" controls>
+                    <source type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            }
+        </div>
+        
+    </section>
+
+</div>

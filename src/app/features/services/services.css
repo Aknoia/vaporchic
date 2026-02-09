@@ -1,0 +1,906 @@
+.services__section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.services__page_title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.services__head_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    position: relative;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 2;
+    padding: 1.5rem;
+    left: 10%;
+    color: var(--text-color);
+    background-color: var(--official-color);
+
+    animation: HomeTitleBoxAnimation 0.5s ease forwards;
+}
+
+.services__head_img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.services__title {
+    font-size: 2.5rem;
+    margin-top: 2%;
+    line-height: 1.2;
+    opacity: 0;
+    color: var(--secondary-color);
+    text-align: center;
+
+    animation: HomeTitleAnimation 0.5s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.services__wrapper_head {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+}
+
+.services__body {
+    width: fit-content;
+    min-height: 70vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.services__menu {
+    width: 100%;
+}
+
+.services__tabs_wrapper {
+    flex-grow: 1;
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+
+.services__menu_list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.services__menu_list_item {
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.services__menu_list_item::before {
+    content: '| ';
+    font-size: 1.50rem;
+    color: var(--primary-color);
+}
+
+.services__menu_list_item:hover {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.services__menu_list_item.active {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.services__content_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services__content {
+    display: none;
+    height: 40vh;
+    width: 80%;
+    background-color: lightgray;
+}
+
+.services__content.active{
+    display: flex;
+    height: 40vh;
+
+    animation-name: HomeTitleBoxAnimation;
+    animation-duration: 1s;
+}
+
+.services__exp_title {
+    color: var(--secondary-color);
+    font-size: 3rem;
+    font-weight: 600;
+    text-shadow: -1px -1px 0 var(--primary-color), 1px -1px 0 var(--primary-color), -1px 1px 0 var(--primary-color), 1px 1px 0 var(--primary-color);
+}
+
+/* Services Articles */
+.services__article {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services__expansion_panel {
+    width: 100%;   
+    scroll-margin-top: 20vh;
+}
+
+.services__article_separator {
+    margin-top: 12rem;
+}
+
+.services__header {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.services__article_layout {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+}
+
+.services__article_inverted_layout {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 1rem;
+}
+
+.services__article_body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.services__article_img {
+    max-width: 475px;
+    border-radius: 24px;
+    border: 1px solid var(--official-color);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.services__photos_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.services__photos_img {
+    width: 30%;
+    height: 25vh;
+    border-radius: 24px;
+    border: 1px solid var(--official-color);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.services__article_description {
+    width: 100%;
+    font-size: 1.95rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.services__article_auto_list {
+    width: 100%;
+    list-style: decimal;
+    margin-top: 2rem;
+}
+
+.services__article_title {
+    font-size: 2.50rem;
+    line-height: 1.4;
+}
+
+.services__article_list_item {
+    height: fit-content;
+    width: 100%;
+    font-size: 1.65rem;
+    color: var(--green-color);
+    line-height: 1.4;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    text-align: center;
+    list-style: none;
+}
+
+.services__article_warnig_materassi {
+    height: fit-content;
+    margin-bottom: 0px;
+    margin-left: 1rem;
+}
+
+.services__article_places_list {
+    margin-left: 1rem;
+    list-style: decimal !important;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.services__article_domicilio_btn {
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    width: 95%;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+    align-self: center;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.services__panel_body {
+    min-height: 20vh;
+    padding-bottom: 2rem;
+}
+
+.services__attention_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.services__attention_icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+}
+
+.services__article_places_grid, .services__article_places_grid_animali {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin-top: 1rem;
+    grid-row-gap: 0.5rem;
+    margin-bottom: 2rem;
+    list-style: none;
+}
+
+.services__checklist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2rem;
+    grid-row-gap: 2rem;
+}
+
+.services__checklist_divani {
+    margin-top: 4rem;
+}
+
+.services__checklist_autovetture {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 4rem;
+}
+
+.services__checkbox_border {
+    border-bottom: 1px solid var(--green-color);
+}
+
+.services__checklist_barche {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2rem;
+}
+
+.services__checklist_locali {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 4rem;
+}
+
+.services__checklist_box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.services__checklist_img {
+    width: 32px;
+    height: 32px;
+    align-self: center;
+}
+
+
+/* Stile Piani Acquistabili */
+.services__grid_plans {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2rem;
+}
+
+.service__grid_plan_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services__plan_icon {
+    width: 64px;
+    height: 64px;
+}
+
+.services__plan_description {
+    color: var(--primary-color);
+    font-size: 1.50rem;
+    font-weight: 500;
+}
+
+.services__fig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services__fig_caption {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.services__expansion_header {
+    background-color: var(--primary-color) !important;
+    border-radius: 0px !important;
+    padding: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.services__separator {
+    background-color: var(--primary-color);
+    height: 2px;
+    width: 95%;
+    align-self: center;
+    justify-self: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Prezzi */
+.services__wrapper_prezzi {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.services__wrapper_prezzi_auto {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 1rem;
+    margin-top: 4rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+.services__wrapper_prezzi_auto2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 6rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.services___prezzi_auto_layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services__wrapper_opzioni {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.service__wrapper_modalita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem;
+    border-bottom: 2px solid var(--green-color);
+}
+
+.services__prezzi_descr {
+    text-align: center;
+    width: fit-content;
+    margin-bottom: 0px;
+}
+
+.services__prezzo {
+    font-size: 3rem;
+}
+
+.services__prezzi_margin {
+    margin-top: 1rem;
+}
+
+.services__preventivo {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.services__checkbox {
+    width: 32px;
+    height: 32px;
+    color: var(--green-color);
+    accent-color: var(--green-color);
+    pointer-events: none;
+}
+
+.services__checkbox_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services__plans_description {
+    text-align: center;
+    width: fit-content;
+}
+
+/* Lista Prezzi Auto Mobile */
+.services__wrapper_lista_mobile {
+    display: none;
+    flex-direction: column;
+    width: 95%;
+}
+
+.services__card_title {
+    border-bottom: 1px solid var(--green-color);
+}
+
+.services__prezzo_mobile {
+    text-align: center;
+}
+
+/* Stile Background "Servizio a Domicilio Disponibile" */
+.services__explosion_layout, .services__explosion_layout2 {
+    position: relative;
+}
+
+.services__explosion_layout2 {
+    display: none;
+}
+
+.explosion, .explosion2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;    
+    z-index: 1;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 40px;
+    animation: pop 0.5s ease-out;
+    position: absolute;
+    width: 160px;
+    clip-path: polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%);
+}
+
+.explosion2 {
+    position: relative !important;
+    align-items: center;
+}
+
+.explosion__position {
+    rotate: -5deg;
+    top: -65px;
+    right: -20%;
+}
+
+.explosion__position_reverse {
+    rotate: 5deg;
+    top: -65px;
+    left: -20%;
+}
+
+.explosion__case {
+    top: -30px;
+    right: -15% !important;
+}
+
+.explosion__locali {
+    top: -30px;
+    right: -10%;
+}
+
+.services__article_camper_descr2, .services__article_barche_descr2, 
+.services__article_descr_divani2, .services__article_materassi_descr2,
+.services__article_descr_tappeti2, .services__article_descr_case2,
+.services__article_descr_animali2 {
+    display: none;
+    align-self: baseline;
+}
+
+.services__article_descr_animali_margin {
+    margin-top: 2rem;
+}
+
+.services__article_locali_descr {
+    margin-top: 2rem;
+}
+
+
+/* Side Navigator Style */
+.navigator__wrapper {
+    position: sticky;
+    z-index: 10000;
+    width: fit-content;
+    height: fit-content;
+    
+    top: 20vh;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+    box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.2);
+    
+    background-color: var(--background-color);
+}
+
+.navigator__list {
+    list-style: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.navigator__list_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.navigator__list_item p {
+    display: none;
+    position: relative;
+    margin-left: 0.5rem;
+    line-height: 1.2;
+}
+
+.navigator__item_img {
+    width: 48px;
+    height: 48px;
+}
+
+.navigator__item_name {
+    display: flex;
+    color: black;
+}
+
+.navigator__wrapper:hover {
+    animation-name: OpenSidebar;
+    animation-duration: 0.5s;
+}
+
+.navigator__wrapper:hover .navigator__item_name {
+    display: flex;
+    color: var(--official-color);
+    height: fit-content;
+    animation-name: SidebarTxtOpacity;
+    animation-duration: 1s;
+}
+
+/* Animazioni*/
+@keyframes pop {
+  0% { transform: scale(0) rotate(-10deg); }
+  80% { transform: scale(1.1) rotate(5deg); }
+  100% { transform: scale(1) rotate(5deg); }
+}
+
+@keyframes OpenSidebar {
+    0% {
+        width: 48px;
+    }
+
+    100% {
+        width: 320px;
+    }
+}
+
+
+@keyframes SidebarTxtOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1300px) {
+    .services__article_camper_descr1, .services__article_barche_descr1,
+    .services__article_materassi_descr1, .services__article_descr_divani1,
+    .services__article_descr_tappeti1, .services__article_descr_case1,
+    .services__article_descr_animali1 {
+        display: none;
+    }
+
+    .services__article_camper_descr2, .services__article_materassi_descr2,
+    .services__article_descr_tappeti2, .services__article_descr_case2,
+    .services__article_descr_animali2 {
+        display: block;
+        margin-left: 3rem;
+        width: 90%;
+    }
+
+    .services__article_barche_descr2, .services__article_descr_divani2 {
+        display: block;
+        width: 100%;
+    }
+
+    .services__checklist_barche {
+        margin-top: 4rem;
+    }
+
+    .services__article_places_grid_animali {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 6rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .services__plan_size {
+        font-size: 1.40rem !important;
+    }
+
+    .services__wrapper_prezzi_auto {
+        flex-direction: column;
+    }
+
+    .services__explosion_layout {
+        display: none;
+    }
+
+    .services__article_auto_list {
+        padding: 0px;
+    }
+
+    .services__article_body {
+        margin-left: 0px;
+    }
+
+    .services__article_barche_descr2, .services__article_descr_divani2 {
+        width: 90%;
+        margin-left: 2rem;
+    }
+
+    .services__article_camper_descr2, .services__article_materassi_descr2,
+    .services__article_descr_tappeti2, .services__article_descr_case2,
+    .services__article_descr_animali2 {
+        margin-left: 2rem;
+    }
+
+    .services__article_locali_descr {
+        text-align: center;
+    }
+
+    .services__explosion_layout2 {
+        display: block;
+    }
+
+    .services__article_explosions_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 6rem;
+        width: 100%;
+    }
+
+    .services__article_img {
+        max-width: 375px;
+        max-height: 280px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .services__plan_size {
+        font-size: 1.50rem !important;
+    }
+
+    .services__checkbox {
+        width: 24px;
+        height: 24px;
+    }
+
+    .services__article_description {
+        font-size: 1.75rem;
+    }
+
+    .services__article_list_item {
+        font-size: 1.45rem;
+    }
+
+    .services__checklist_barche {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 2rem;
+    }
+
+    .services__checklist, .services__article_places_grid_animali {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services__article_explosions_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services__explosion_layout2 {
+        margin-bottom: 6rem;
+    }
+
+    .services__exp_title {
+        font-size: 2rem;
+    }
+
+    .services__checklist_locali {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services__article_places_grid {
+        margin-top: 2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .services__article_description {
+        font-size: 1.65rem;
+    }
+
+    .services__checkbox {
+        width: 16px;    
+        height: 16px;
+    }
+
+    .services__plan_size {
+        font-size: 1.25rem !important;
+        text-align: center;
+    }
+
+    .services__grid_plans {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services__attention_box {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) and (min-width: 320px) {
+    .services__card_mobile {
+        width: 80%;
+        margin-bottom: 4rem;
+        border-radius: 12px;
+        border: 1px solid var(--official-color);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services__prezzo_mobile {
+        font-size: 1.50rem !important;
+        margin-top: 2rem;
+    }
+
+    .services__card_descr {
+        text-align: left !important;
+        font-size: 1.25rem !important;
+    }
+
+    .services__wrapper_lista_mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    .services__wrapper_prezzi_auto {
+        margin-top: 2rem;
+        display: none;
+    }
+
+    .services__wrapper_prezzi_auto2 {
+        flex-direction: column;
+    }
+
+    .services___prezzi_auto_layout {
+        margin-bottom: 3rem;
+    }
+
+    .services__article_body {
+        padding: 0px;
+    }
+
+    .services__article_description {
+        text-align: center;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+    .services__article_list_item {
+        margin-top: 1rem;
+    }
+
+    .services__article_img {
+        max-width: 230px;
+    }
+
+    .services__article_barche_descr2, .services__article_descr_divani2 {
+        width: 100%;
+    }
+
+    .services__article_camper_descr2, .services__article_materassi_descr2,
+    .services__article_descr_tappeti2, .services__article_descr_case2,
+    .services__article_descr_animali2 {
+        width: 100%;
+    }
+
+
+    .services__checklist_barche, .services__checklist_locali,
+    .services__grid_plans {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services__article_places_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services__article_places_grid_animali {
+        margin-left: 0px;
+    }
+}

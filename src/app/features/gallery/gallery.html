@@ -1,0 +1,57 @@
+<main class="gallery__section">
+    
+    <section class="gallery__body">
+
+
+        <div style="display: flex;flex-direction: row;">
+            <img src="assets/icons/star.png" alt="Stella"/>
+            <h1 class="gallery__uptitle">Gallery, I Nostri Lavori</h1>
+        </div>
+
+
+        <h2 class="gallery__title">Dai un'occhiata ai nostri Lavori</h2>
+
+        
+        <div class="gallery__tablist_wrapper">
+            <ul class="gallery__tablist">
+
+                @for (tab of tabs; track $index) {
+                    <li class="gallery__tab"
+                        (click)="selectTab($index)"
+                        [class.selected]="selectedTab === $index">
+
+                        <p class="gallery__tab_title">{{tab.title}}</p>
+                    </li>
+                } 
+                
+                
+            </ul>
+        </div>
+
+
+
+        <div class="gallery__photo_layout">
+
+            @for (foto of galleria[currTab]; track foto) {
+
+                <div class="gallery__photo_box" animate.enter="gallery__photo_enter_animation" animate.leave="gallery__photo_leave_animation">
+                    @if (foto.includes('png') || foto.includes('gif') || foto.includes('jpg') || foto.includes('jpeg')) {
+                        <img class="gallery__photo" [src]="foto" [alt]="$index"/>
+                    }
+
+                    
+                    @if (foto.includes('mp4')) {
+                        <video class="gallery__photo" controls>
+                            <source src="{{foto}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    }
+                </div>
+                
+            }
+        </div>
+    </section>
+
+    
+
+</main>

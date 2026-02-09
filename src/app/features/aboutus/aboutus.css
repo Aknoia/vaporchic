@@ -1,0 +1,205 @@
+/* Il mondo Vaporchic */
+.aboutus__about_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.aboutus {
+    height: fit-content;
+    min-height: 77vh;
+}
+
+.aboutus__about_article, .aboutus__about_article_reverse {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 2rem 0;
+    padding: 1.5rem;
+}
+
+.aboutus__about_article_reverse {
+    flex-direction: column-reverse;
+}
+
+.aboutus__about_text_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+.aboutus__about_text_wrapper_reverse {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+.aboutus__about_img {
+    border-radius: 12px;
+    width: 400px;
+}
+
+.aboutus__about_uptitle {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--primary-color-light2);
+    height: fit-content;
+    margin-left: 0.5rem;
+}
+
+.aboutus__about_description_title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    color: var(--primary-color);
+}
+
+.aboutus__about_uptitle_wrapper {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+.aboutus__about_description_text {
+    font-size: 1.75rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.aboutus__about_check_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.aboutus__about_description_check {
+    height: fit-content;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    color: var(--green-color);
+    font-weight: 600;
+}
+
+.aboutus__about_img_wrapper {
+    height: fit-content;
+}
+
+.aboutsus__description_desktop {
+    display: block;
+}
+
+.aboutsus__description_mobile {
+    display: none;
+}
+
+.aboutus__about_article {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutus__wrapper_head {
+    display: flex;
+    flex-direction: row;
+}
+
+.aboutus__wrapper_head_reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Mondo Vaporchic */
+@media (max-width: 1400px) {
+    .aboutus__about_article {
+        width: 70%;
+    } 
+
+    .aboutsus__description_desktop {
+        display: none;
+    }
+
+    .aboutsus__description_mobile {
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .aboutus__about_article {
+        width: 85%;
+    }
+
+    .aboutus__about_uptitle_icon {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 992px) {
+     .aboutus__about_img {
+        width: 300px;
+        height: 400px;
+    }
+
+    .aboutus__about_description_check {
+        font-size: 1rem;
+    }
+    
+    .aboutus__about_description_text {
+        font-size: 1.75rem;
+    }
+
+    .aboutus__about_uptitle_icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutus__about_article { 
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+    }
+
+    .aboutus__about_img {
+        display: none;
+        width: auto;
+        height: auto;
+        max-width: 400px;
+    }
+
+    .aboutus__about_uptitle_wrapper {
+        justify-content: center;
+    }
+
+    .aboutus__about_text_wrapper {
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aboutus__about_description_title {
+        text-align: center;
+    }
+
+    .aboutus__about_description_text {
+        text-align: center;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 572px) { 
+    .aboutus__about_description_text {
+        max-width: 100%;
+    }
+    
+    .aboutus__about_img {
+        width: 300px;
+        display: none;
+    }
+}

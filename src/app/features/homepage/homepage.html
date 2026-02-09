@@ -1,0 +1,493 @@
+<main class="homepage__wrapper">
+
+    <section class="homapage__title_section" style="width: 100%;">
+        
+         <div class="homepage__header_title_wrapper">
+
+            
+            <img class="servizio__background" style="width: 100%;" src="assets/gallery/incendi/incendio5.jpeg">
+            
+            
+
+            <div class="homepage__title_color">
+                <h1 class="homepage__header_title">PULIZIA SANIFICAZIONE DISINFEZIONE A VAPORE IMPRESA DI PULIZIE</h1>
+            </div>
+        </div>
+
+
+       <!--<div class="homepage__title_wrapper">
+
+
+            <div class="homepage__banner_wrapper" style="margin-left: 2rem;">
+                <img class="homepage__banner_img" src="assets/images/banner1.jpeg" alt="Vaporchic Banner 1">
+            </div>
+
+
+            <div class="homepage__title_box">
+
+                <article class="homepage__title_article">
+                    <img class="homepage__title_logo" src="assets/images/logoblu.png" width="600" height="400" alt="Logo Vaporchic Blu" fetchpriority="high">
+
+
+                    <h1 class="homepage__title">
+                        Impresa di <span class="highlight_txt4 blue_border">Pulizie</span>
+                        e Sanificazione a Vapore <br>
+                        <span class="highlight_txt4 blue_border">a Siracusa e Provincia</span>
+                    </h1>
+
+                    <h2 class="homepage__title" style="margin-top: 2rem;">
+                        Servizio a Domicilio disponibile 
+                    </h2>
+
+
+                    <div class="homepage__title_btn_wrapper">
+                        <button class="homepage__btn_title" (click)="scrollToServices()">
+                            I Nostri Servizi
+                        </button>
+
+                        <button class="homepage__btn_title" (click)="scrollToAboutUs()">
+                            Chi siamo
+                        </button>
+                    </div>        
+                </article>
+            </div>
+
+
+            <div class="homepage__banner_wrapper" style="margin-right: 2rem;">
+                <img class="homepage__banner_img" src="assets/images/banner2.jpeg" alt="Vaporchic Banner 2">
+            </div>
+
+            <img>
+        </div>-->
+    </section>
+
+
+
+    <!-- Showcase Lavori -->
+    <!--<section class="homepage__showcase_section">
+        <div class="homepage__showcase_wrapper">
+            @for (box of showcases; track $index; let boxIndex = $index) {
+                <div class="homepage__showcase_box">
+
+
+                    <div class="showcase__img_wrapper">
+                        <img class="showcase__img" [src]="box[activeIndexes[$index]()]" animate.enter="gallery__photo_enter_animation" animate.leave="gallery__photo_leave_animation" fetchpriority="high" alt="Immagine Showcase"/>
+
+                        <div class="showcase__btn_wrapper">
+
+                            <img class="showcase__btn" (click)="prevServiceImg(boxIndex)" src="assets/icons/left-arrow-bg.png" alt="Showcase Precedente"/>
+                            <img class="showcase__btn" (click)="nextServiceImg(boxIndex)" src="assets/icons/right-arrow-bg.png" alt="Showcase Successivo"/>
+                        
+                        </div>
+                    </div>
+
+
+
+                    @switch ($index) {
+                        @case (0) {
+                            <h2 class="showcase__title">Pulizia</h2>
+                            <p class="showcase__descr">Pulizie Ordinarie e <span class="highlight_txt2">Straordinarie</span></p>
+                            <p class="showcase__descr">Servizio Per Veicoli, Imbarcazioni, Locali Commerciali e Case</p>
+                        }
+
+                        @case (1) {
+                            <h2 class="showcase__title">Lavaggio</h2>
+                            <p class="showcase__descr">Lavaggio di Veicoli, Imbarcazioni, Divani, Tappeti, Teli e Materassi</p>
+                        }
+
+                        @case (2) {
+                            <h2 class="showcase__title">Sanificazione</h2>
+                            <p class="showcase__descr">Servizio di Sanificazione per Ambienti, Servizi Igienici e Tappezzeria</p>
+                        }
+
+                        @case (3) {
+                            <h2 class="showcase__title">Disinfezione</h2>
+                            <p class="showcase__descr">Servizio di Disinfezione Ambienti con Trattamento a Vapore 180° ed Ozono</p>
+                        }
+                    }
+
+
+                    <button class="showcase__btn_domicilio">
+                        Servizio a Domicilio
+                    </button>
+                </div>
+            }
+        </div>
+
+    </section>-->
+
+    
+
+    <!-- About US-->
+    <section id="section-about-us" class="homepage__about_wrapper" animateOnScroll="fade_left">
+        
+        <article class="homepage__about_article">
+
+
+            <div style="display: flex;flex-direction: row;">
+                <div class="homepage__about_img_wrapper">
+                    <img class="homepage__about_img" src="assets/images/poltrona.jpeg" alt="Informazioni Vaporchic"/>
+                </div>
+
+
+                <div class="homepage__about_text_wrapper">
+                    <div class="homepage__about_uptitle_wrapper">
+                        <img class="homepage__about_uptitle_icon" src="assets/icons/star.png" alt="Icona informazioni"/>
+                        <p class="homepage__about_uptitle">Vaporchic</p>
+                    </div>
+                    
+
+                    <h2 class="homepage__about_description_title">Perchè scegliere noi?</h2>
+                    <p class="homepage__about_description_text">VaporChic è un'azienda specializzata in servizi di pulizia, lavaggio, <span class="highlight_txt2">sanificazione e disinfezione</span> a vapore per <span class="highlight_txt2">Autovetture, Tappezzerie, Locali Commerciali</span> e molto altro a <span class="highlight_txt2">Siracusa</span> e provincia</p>
+                    <p class="homepage__about_description_text">Utilizziamo tecnologie all'avanguardia per garantire <span class="highlight_txt2">risultati eccellenti</span> e rispettosi dell'ambiente.</p>
+
+
+                    <div class="homepage__about_check_wrapper">
+                        <img class="homepage__about_uptitle_icon" src="assets/icons/star.png" alt="Icona informazioni"/>
+
+                        <p class="homepage__about_description_check">Innovativi sistemi a Vapore </p>
+                    </div>
+
+
+                    <div class="homepage__about_check_wrapper">
+                        <img class="homepage__about_uptitle_icon" src="assets/icons/star.png" alt="Icona informazioni"/>
+
+                        <p class="homepage__about_description_check">Eliminiamo anche le macchie più ostinate </p>
+                    </div>
+
+
+                    <div class="homepage__about_check_wrapper">
+                        <img class="homepage__about_uptitle_icon" src="assets/icons/star.png" alt="Icona informazioni"/>
+
+                        <p class="homepage__about_description_check">Prodotti Certificati e 100% Biodegradabili </p>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <div class="homepage__about_wrapper2">
+
+                <div class="homepage__about_check_wrapper homepage__about_check_wrapper2">
+                    <img class="homepage__about_uptitle_icon" src="assets/icons/star.png" alt="Icona informazioni"/>
+
+                    <p class="homepage__about_description_check">Innovativi sistemi a Vapore </p>
+                </div>
+
+
+                <div class="homepage__about_check_wrapper homepage__about_check_wrapper2">
+                    <img class="homepage__about_uptitle_icon" src="assets/icons/star.png" alt="Icona informazioni"/>
+
+                    <p class="homepage__about_description_check">Eliminiamo anche le macchie più ostinate </p>
+                </div>
+
+
+                <div class="homepage__about_check_wrapper homepage__about_check_wrapper2">
+                    <img class="homepage__about_uptitle_icon" src="assets/icons/star.png" alt="Icona informazioni"/>
+
+                    <p class="homepage__about_description_check">Prodotti Certificati e 100% Biodegradabili </p>
+                </div>    
+            </div>
+            
+            
+        </article>
+
+    </section>
+
+
+
+
+    <!-- Section Servizi -->
+    <section id="section-services" class="homepage__section_services" >
+        
+        <div class="homepage__services_wrapper" animateOnScroll="fade_left">
+
+            <img class="homepage__services_vapor_logo" src="assets/images/logo.png" width="600" height="400" alt="Vaporchic logo">
+            <h2 class="homepage__services_title">I Nostri Servizi</h2>
+
+
+            <div class="homepage__services_grid_wrapper" [class.enter]="!leaving()" [class.leave]="leaving()">
+                @for (page of pagesDesktop; track page.title) {
+                    <div class="homepage__service_box">
+                        <div class="services__img_wrapper">
+
+
+                            
+
+                            @if (page.video) {
+                                <video class="homepage__service_img" controls>
+                                    <source src="{{page.video}}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            }
+
+                            <div class="services__descr_grid">
+                                <h2 class="showcase__title">{{page.title}}</h2>
+                                <img class="services__info_img" src="assets/icons/bluinfo64x64.png" [routerLink]="page.link" alt="Informazioni Servizio"/>
+                            </div>
+                            
+                        </div>
+                    </div>
+                }
+            </div>
+
+            @if (visible()) {
+
+                <!--<div class="homepage__services_cards_wrapper" [class.enter]="!leaving()" [class.leave]="leaving()">
+                    @for (page of visiblePages; track page.title) {
+                        <div class="homepage__service_box">
+                            <div class="services__img_wrapper">
+
+
+                                @if (page.hasImg) {
+                                    <img class="homepage__service_img" src="{{page.img}}" alt="{{page.altImg}}"/>
+                                }
+
+                                @if (page.hasGif) {
+                                    <img class="homepage__service_img" src="{{page.gif}}" alt="{{page.altImg}}"/>
+                                }
+
+                                @if (page.hasVideo) {
+                                    <video class="homepage__service_img" controls>
+                                        <source src="{{page.video}}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                }
+
+                                <h2 class="showcase__title">{{page.title}}</h2>
+                                <img class="services__info_img" src="assets/icons/bluinfo64x64.png" routerLink="/servizi" alt="Informazioni Servizio"/>
+                            </div>
+                        </div>
+                    }
+                </div>-->
+            
+               <!-- <div class="homepage__services_cards_wrapper" [class.enter]="!leaving()" [class.leave]="leaving()">
+
+                    @for (page of visiblePages; track page.title) {
+                        <div class="homepage__service_box">
+
+                            <div class="services__img_wrapper">
+
+
+                                @if (page.hasImg) {
+                                    <img class="homepage__service_img" src="{{page.img}}" alt="{{page.altImg}}"/>
+                                }
+
+                                @if (page.hasGif) {
+                                    <img class="homepage__service_img" src="{{page.gif}}" alt="{{page.altImg}}"/>
+                                }
+
+                                @if (page.hasVideo) {
+                                    <video class="homepage__service_img" controls>
+                                        <source src="{{page.video}}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                }
+                            </div>
+
+                            
+                            <h2 class="showcase__title">{{page.title}}</h2>
+
+                            <p class="showcase__descr">{{page.descr1}}</p>
+                            <p class="showcase__descr">{{page.descr2}}</p>
+                            <p class="showcase__descr">{{page.descr3}}</p>
+                            
+                            <img class="services__info_img" src="assets/icons/bluinfo64x64.png" routerLink="/servizi" alt="Informazioni Servizio"/>
+                        </div>
+
+                    
+                    }
+                    
+                </div> -->
+            }
+        </div>
+        
+        
+        <!--<div class="homepage__service_btn_wrapper">
+
+            <button class="homepage__service_page_btn" title="Servizio Precedente" (click)="prev()">
+                <mat-icon class="homepage__page_btn_image">arrow_back</mat-icon>
+            </button>
+
+
+            <button class="homepage__service_page_btn" title="Servizio Successivo" (click)="next()">
+                <mat-icon class="homepage__page_btn_image" style="width: 100%;height: 100%;font-size: 3.5rem;">arrow_forward</mat-icon>
+            </button>
+
+        </div>
+    -->
+        
+    </section>
+
+   
+
+    <!-- Sezione Contatti -->
+    <section class="homepage__contact_wrapper" animateOnScroll="fade_left">
+
+
+        <!-- Titolo Sezione Contatti -->
+        <article class="homepage__contact_article">
+            <h2 class="homepage__contact_title">Vorresti un Preventivo?</h2>
+            <p class="homepage__contact_descr"><span class="highlight_txt2">Contattaci subito </span> per ricevere Assistenza da un nostro <span class="highlight_txt2">Operatore!</span></p>
+        </article>
+
+
+
+        <!-- Lista Contatti Disponibili -->
+        <div class="homepage__contacts_list_wrapper">
+
+
+            <!-- Email -->
+            <article class="homepage_contacts_list_box">
+
+                <div class="homepage__contacts_item_head_wrapper">
+
+                    <img class="homepage__contacts_item_img" src="assets/icons/email.png" alt="Invia Email">
+
+                    <div class="homepage__contacts_item_descr_wrapper">
+                        <p class="homepage__contacts_uptitle">Scrivici Subito!</p>
+                        <p class="homepage__contacts_subtitle">Email:</p>
+                    </div>
+                </div>
+
+                <p class="homepage__contacts_value"><a class="homepage__contacts_value" href="mailto:info@vaporchic.com">info@vaporchic.com</a></p>
+            </article>
+
+            
+
+
+            <!-- Telefono -->
+            <article class="homepage_contacts_list_box margin_left margin_right">
+                <div class="homepage__contacts_item_head_wrapper">
+
+                    <img class="homepage__contacts_item_img" src="assets/icons/chiama.png" alt="Chiamaci Ora!">
+
+                    <div class="homepage__contacts_item_descr_wrapper">
+                        <p class="homepage__contacts_uptitle">Chiamaci Ora!</p>
+                        <p class="homepage__contacts_subtitle">Telefono:</p>
+                    </div>
+                </div>
+
+                <p class="homepage__contacts_value"><a class="homepage__contacts_value" href="tel:+393471234567">+39 347 123 4567</a></p>
+            </article>
+
+
+
+
+            <article class="homepage_contacts_list_box">
+                <div class="homepage__contacts_item_head_wrapper">
+
+                    <img class="homepage__contacts_item_img" src="assets/icons/email.png" alt="Invia Email">
+
+                    <div class="homepage__contacts_item_descr_wrapper">
+                        <p class="homepage__contacts_uptitle">Anche in Sede!</p>
+                        <p class="homepage__contacts_subtitle">Indirizzo:</p>
+                    </div>
+                </div>
+
+                <p class="homepage__contacts_value homepage__contacts_value">Via Sciascia, 34, 96014 Floridia SR</p>
+            </article>
+        </div>
+
+
+
+        <div class="homepage__contacts_wrapper_form">
+
+
+            <img class="homepage__contacts_form_img" src="assets/images/fototelefono.png" alt="Contattaci"/>
+
+
+            <form class="homepage__form">
+
+                <div class="homepage__form_header">
+
+                    <div class="homepage__form_field_wrapper">
+                        <input class="homepage__form_field" type="text" name="nome" placeholder="Inserisci Nome"/>
+                    </div>
+
+                    <div class="homepage__form_field_wrapper">
+                        <input class="homepage__form_field" type="email" name="email" placeholder="Inserisci Email"/>
+                    </div>
+
+                </div>
+
+                <div class="homepage__form_header">
+
+                    <div class="homepage__form_field_wrapper">
+                        <input class="homepage__form_field" type="tel" name="telefono" placeholder="Inserisci il Numero di Telefono"/>
+                    </div>
+
+                    <div class="homepage__form_field_wrapper">
+                        <input class="homepage__form_field" type="text" name="oggetto" placeholder="Inserisci il Motivo"/>
+                    </div>
+
+                </div>
+                
+
+                <div class="homepage__form_msg_wrapper">
+                    <textarea class="homepage__text_area" name="messaggio" placeholder="Lasciaci un messaggio"></textarea>
+                </div>
+                
+
+                <button class="homepage__form_btn">
+                    Invia Messaggio
+
+                    <img class="homepage__form_btn_img" src="assets/icons/invia.png" alt="Invia Messaggio">
+                </button>
+
+            </form>
+
+
+        </div>
+            
+    </section>    
+    
+    
+
+    <section class="footer__recensioni_section">
+        <h2 class="footer__recensioni_section_title">Recensioni Google dai nostri Clienti</h2>
+
+        <div class="footer__recensione_rating_wrapper">
+            <p class="footer__recensione_rating">5.0</p>
+
+            <img class="footer__recensione_star" src="assets/icons/reviewstar.png" width="32" height="32" alt="Stella Recenzione">
+            <img class="footer__recensione_star" src="assets/icons/reviewstar.png" width="32" height="32" alt="Stella Recenzione">
+            <img class="footer__recensione_star" src="assets/icons/reviewstar.png" width="32" height="32" alt="Stella Recenzione">
+            <img class="footer__recensione_star" src="assets/icons/reviewstar.png" width="32" height="32" alt="Stella Recenzione">
+            <img class="footer__recensione_star" src="assets/icons/reviewstar.png" width="32" height="32" alt="Stella Recenzione">
+
+            <a class="footer__recensione_recnum" href="https://share.google/B94QWCv1Z1WfOKZDM">(98 Recensioni)</a>
+        </div>
+
+
+
+        <div class="footer__recensioni_layout">
+
+            @for (recensione of recensioni; track $index) {
+
+                <article class="footer__recensione" animateOnScroll="fade_left">
+                    <a [href]="recensione.link">
+                        <div class="footer__recensione_header">
+                            <img class="footer__google_img" src="assets/icons/google.png" alt="Icona Google"/>
+
+                            <div class="footer__recensione_autore_wrapper">
+                                <p class="footer__recensione_author">{{recensione.author}}</p>
+                                <p class="footer__recensione_data">{{recensione.data}}</p>
+                            </div>
+                            
+                        </div>
+
+                        <h3 class="footer__recensione_title">{{recensione.title}}</h3>
+
+                        <p class="footer__recensione_descr">{{recensione.descr1}}</p>
+                        <p class="footer__recensione_descr">{{recensione.descr2}}</p>
+                        <p class="footer__recensione_descr">{{recensione.descr3}}</p>
+                    </a>
+                </article>
+
+            }
+
+        </div>
+    </section>
+
+</main> 

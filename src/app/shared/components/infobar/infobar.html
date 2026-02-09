@@ -1,0 +1,27 @@
+<section class="infobar__section">
+
+    <div class="ticker"
+        (mouseenter)="pause()"
+        (mouseleave)="resume()"
+        >
+
+        <div class="ticker__track" [class.paused]="paused">
+
+
+            <div class="ticker__content">
+                @for (label of items; track $index) {
+                    <span [class.highlight_txt3]="$index == 0">{{label}}</span>
+                }
+            </div>
+
+
+            <div class="ticker__content">
+                @for (label of items; track $index) {
+                    <span [class.highlight_txt3]="$index == 0">{{label}}</span>
+                }
+            </div>
+        </div>
+    </div>
+
+
+</section>

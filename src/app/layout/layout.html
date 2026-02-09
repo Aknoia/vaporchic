@@ -1,0 +1,41 @@
+
+
+<!-- Mobile Sidebar -->
+<mat-sidenav-container>
+
+    <!-- MATERIAL DRAWER -->
+    <mat-sidenav #sidenav mode="side" opened="false">
+        <app-sidebar></app-sidebar>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <main class="main">
+
+            <!-- Top Navigation Bar -->
+            <app-navbar class="app__navbar"></app-navbar>
+
+            <app-infobar></app-infobar>
+
+            <!-- Floating BTN -->
+            <a href="tel:+39344-119-4955" class="layout__floating_btn">
+                <img class="layout__floating_img" src="assets/icons/chiama.png" alt="Chiamaci al numero" >
+            </a>
+    
+
+            <!-- Router -->
+            <section class="content">
+                <router-outlet>
+                    
+                </router-outlet>
+            </section>
+
+            <app-footer class="app__footer"></app-footer>
+        </main>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+
+
+
