@@ -40,7 +40,7 @@
         <div class="navbar__logo_group">
             <div class="navbar__logo_wrapper">
                 <!-- Logo -->
-                <img class="navbar__logo" src="assets/images/logoblu.png"  alt="Logo" routerLink="/home">
+                <img class="navbar__logo" src="assets/images/logoblu.webp"  alt="Logo" href="/" routerLink="/">
             </div>
 
 
@@ -74,7 +74,7 @@
 
                 <!-- Homepage -->
                 <li class="navbar__nav_button">
-                    <a class="navbar__link_txt" href="/home" routerLink="/home">Home</a>
+                    <a class="navbar__link_txt" href="/" routerLink="/">Home</a>
                 </li>
 
                 <!-- Chi Siamo -->
@@ -82,80 +82,115 @@
                     <a class="navbar__link_txt" href="/chi-siamo" routerLink="/chi-siamo">Chi Siamo</a>
                 </li>
 
+                
                 <!-- Servizi -->
                 <li class="navbar__nav_button" [matMenuTriggerFor]="menu_servizi">
-                    <a class="navbar__link_txt">Servizi</a>
+                    <p class="navbar__link_txt">Servizi</p>
 
-                    <button matIconButton [matMenuTriggerFor]="menu_servizi">
-                        <mat-icon>keyboard_arrow_down</mat-icon>
-                    </button>
-
-                    <mat-menu #menu_servizi="matMenu" class="navbar__menu" panelClass="navbar__menu">
-                        <!-- Autovetture -->
-                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/Autovetture">
+                    <mat-menu #menu_servizi class="navbar__menu" panelClass="navbar__menu">
+                        <!-- Autovetture-->
+                        <button mat-menu-item class="navbar__menu_button" [matMenuTriggerFor]="autosub">
                             <mat-icon class="navbar__menu_icon">directions_car</mat-icon>
                             <span class="navbar__menu_label">Autovetture</span>
                         </button>
 
                         <!-- Camper -->
-                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/Camper">
+                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/camper">
                             <mat-icon class="navbar__menu_icon">airport_shuttle</mat-icon>
                             <span class="navbar__menu_label">Camper</span>
                         </button>
 
                         <!-- Imbarcazioni -->
-                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/Imbarcazioni">
+                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/imbarcazioni">
                             <mat-icon class="navbar__menu_icon">directions_boat</mat-icon>
                             <span class="navbar__menu_label">Imbarcazioni</span>
                         </button>
 
                         <!-- Divani e Poltrone -->
-                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/Divani">
+                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/divani">
                             <mat-icon class="navbar__menu_icon">chair</mat-icon>
-                            <span class="navbar__menu_label">Divani e Poltrone</span>
+                            <span class="navbar__menu_label">Divani, Poltrone e Sedie</span>
                         </button>
 
                         <!-- Materassi -->
-                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/Materassi">
+                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/materassi">
                             <mat-icon class="navbar__menu_icon">airline_seat_individual_suite</mat-icon>
                             <span class="navbar__menu_label">Materassi</span>
                         </button>
                         
                         <!-- Tappeti -->
-                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/Tappeti">
+                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/tappeti">
                             <mat-icon class="navbar__menu_icon">receipt</mat-icon>
                             <span class="navbar__menu_label">Tappeti</span>
                         </button>
 
+                        <!-- Tappeti -->
+                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/tappezzeria">
+                            <mat-icon class="navbar__menu_icon">event_seat</mat-icon>
+                            <span class="navbar__menu_label">Tappezzeria</span>
+                        </button>
+
+                        <!-- Pulizia Ordinaria -->
+                        <!--<button mat-menu-item class="navbar__menu_button" routerLink="/servizio/puliziaordinaria">
+                            <mat-icon class="navbar__menu_icon">clean_hands</mat-icon>
+                            <span class="navbar__menu_label">Pulizia Ordinaria</span>
+                        </button>-->
+
+                        <!-- Pulizia Straordinaria -->
+                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/puliziastraordinaria">
+                            <mat-icon class="navbar__menu_icon">clean_hands</mat-icon>
+                            <span class="navbar__menu_label">Pulizia Straordinaria</span>
+                        </button>
+
                         <!-- Locali Commerciali, Uffici e Negozi -->
-                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/Locali">
+                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/locali">
                             <mat-icon class="navbar__menu_icon">business_center</mat-icon>
                             <span class="navbar__menu_label">Locali Commerciali, Uffici e Negozi</span>
                         </button>
 
-                        <!-- Condomini, Villette e Case Vacanze  -->
-                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/Abitazioni">
+                        <button mat-menu-item class="navbar__menu_button" [matMenuTriggerFor]="casesub">
                             <mat-icon class="navbar__menu_icon">home</mat-icon>
                             <span class="navbar__menu_label">Abitazioni, Villette e Case Vacanze</span>
                         </button>
+
                         
                         <!-- Animali -->
-                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/Animali">
+                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/animali">
                             <mat-icon class="navbar__menu_icon">pets</mat-icon>
-                            <span class="navbar__menu_label">Animali</span>
+                            <span class="navbar__menu_label">Animali, Urina e Vomito</span>
                         </button>
 
                         <!-- Ambientale -->
-                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/Ambienti">
+                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/ambienti">
                             <mat-icon class="navbar__menu_icon">family_restrooms</mat-icon>
                             <span class="navbar__menu_label">Ambienti</span>
                         </button>
 
                         <!-- Incendi -->
-                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/Incendi">
+                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/incendi">
                             <mat-icon class="navbar__menu_icon">local_fire_department</mat-icon>
-                            <span class="navbar__menu_label">Incendi</span>
+                            <span class="navbar__menu_label">Case Inciendiate</span>
                         </button>
+
+                        <!-- Tende da Sole -->
+                        <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/tendedasole">
+                            <mat-icon class="navbar__menu_icon">sunny</mat-icon>
+                            <span class="navbar__menu_label">Tende da Sole e Gazebi</span>
+                        </button>
+                    </mat-menu>
+
+
+
+
+                    <mat-menu #autosub="matMenu" class="navbar__menu" panelClass="navbar__menu">
+                        <button routerLink="/servizio/autovetture"  mat-menu-item class="navbar__menu_label">Autovetture</button>
+                        <button routerLink="/servizio/cardetailing" mat-menu-item class="navbar__menu_label">Car Detailing</button>
+                    </mat-menu>
+
+
+                    <mat-menu #casesub="matMenu" class="navbar__menu" panelClass="navbar__menu">
+                        <button routerLink="/servizio/abitazioni"  mat-menu-item class="navbar__menu_label">Abitazioni</button>
+                        <button routerLink="/servizio/casevacanza" mat-menu-item class="navbar__menu_label">Case Vacanza</button>
                     </mat-menu>
                 </li>
 
@@ -174,29 +209,29 @@
 
 
         <!-- Social Buttons -->
-        <div class="navbar__social_wrapper">
+        <div class="social__wrapper navbar__social_wrapper">
 
             <!-- Whatsapp -->
-            <a class="navbar__social_link" title="whatsapp" target="_blank" href="https://api.whatsapp.com/send?phone=3887236826">
-                <img src="assets/icons/whatsapp.png" style="width: 32px; height: 32px;" />
+            <a class="social__links" title="whatsapp" target="_blank" href="https://api.whatsapp.com/send?phone=3887236826">
+                <img src="assets/icons/whatsapp.webp" class="social__img" alt="Logo Whatsapp"/>
             </a>
 
 
             <!-- Youtube -->
-            <a class="navbar__social_link" title="youtube" target="_blank" href="https://www.youtube.com/@VAPORCHIC?app=desktop">
-                <img src="assets/icons/youtube.png" style="width: 32px; height: 32px;" />
+            <a class="social__links" title="youtube" target="_blank" href="https://www.youtube.com/@VAPORCHIC?app=desktop">
+                <img src="assets/icons/youtube.webp" class="social__img" alt="Logo Youtube"/>
             </a>
 
 
             <!-- Tiktok -->
-            <a class="navbar__social_link" title="tiktok" target="_blank" href="https://www.tiktok.com/@vaporchic?is_from_webapp=1&sender_device=pc">
-                <img src="assets/icons/tiktok.png" style="width: 32px; height: 32px;" />
+            <a class="social__links" title="tiktok" target="_blank" href="https://www.tiktok.com/@vaporchic?is_from_webapp=1&sender_device=pc">
+                <img src="assets/icons/tiktok.webp" class="social__img" alt="Logo TikTok"/>
             </a>
 
 
             <!-- Facebook -->
-            <a class="navbar__social_link navbar__facebook_icon" title="facebook" target="_blank" href="https://www.facebook.com/p/VaporChic-Pulizia-e-Sanificazione-a-Vapore-61566351196944/">
-                <span >
+            <a class="social__links social__facebook_icon" title="facebook" target="_blank" href="https://www.facebook.com/p/VaporChic-Pulizia-e-Sanificazione-a-Vapore-61566351196944/">
+                <span>
                     <svg preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
                         <use xlink:href="#svg-654d"></use>
                     </svg>
@@ -215,7 +250,7 @@
 
 
             <!-- Instagram -->
-            <a class="navbar__social_link navbar__instagram_icon" title="instagram" target="_blank" href="https://www.instagram.com/vaporchic_pulizia_">
+            <a class="social__links social__instagram_icon" title="instagram" target="_blank" href="https://www.instagram.com/vaporchic_pulizia_">
                 <span>
                     <svg preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
                         <use xlink:href="#svg-a506"></use>
@@ -230,6 +265,7 @@
                 </span>
             </a>
         </div>
+
     </div>
 
 

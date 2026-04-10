@@ -22,7 +22,13 @@ export class Infobar {
     'Divani',
     'Materassi',
     'Tappeti',
-    'Tende da Sole'
+    'Tende da Sole',
+    'Automotive',
+    'tappezzeria',
+    'Abitazioni',
+    'Animali',
+    'Ambienti',
+    'Incendi'
   ]
 
   

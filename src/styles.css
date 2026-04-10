@@ -1,7 +1,5 @@
-@use '@angular/material' as mat;
-
 :root {
-    --primary-color: #005D91;
+    --primary-color: rgb(0, 90, 143);
     --primary-color-light: rgb(51, 142, 207, 0.3);
     --primary-color-light2: rgb(51, 142, 207, 0.8);
 
@@ -14,6 +12,7 @@
 
 
     --green-color: #3F784C;
+    --whatsapp-green: rgb(41, 167, 26);
     --red-color: rgb(207, 31, 37);
     --background-color: #F8F8F8;
     --text-color: #F7F7F9;
@@ -30,6 +29,7 @@
 @font-face {
   font-family: "Golos Text";
   src: url("/assets/fonts/GolosText-VariableFont_wght.ttf") format("opentype");
+  font-display: swap;
 }
 
 html {
@@ -79,6 +79,7 @@ a:hover {
     color: var(--primary-color);
     text-decoration: underline;
 }
+
 
 
 /* Navbar Dropdown Menu */
@@ -155,12 +156,6 @@ a:hover {
     text-decoration: underline var(--green-color) 2px !important;
 }
 
-.blue_border {
-    text-shadow: -1px -1px 0 var(--primary-color), 
-                  1px -1px 0 var(--primary-color), 
-                 -1px 1px 0 var(--primary-color), 
-                  1px 1px 0 var(--primary-color);
-}
 
 
 /* Sidebar */
@@ -233,25 +228,6 @@ mat-sidenav-container {
 }
 
 
-/* Bottoni Default */
-.card_btn {
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 1.25rem;
-
-    background-color: var(--primary-color-light);
-    border: 1px solid var(--secondary-color);
-    color: var(--secondary-color);
-    font-weight: 600;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
-    border-radius: 12px;
-    padding: 10px;
-}
-
-.card_btn:hover {
-    opacity: 0.7
-}
 
 
 .content {
@@ -275,6 +251,8 @@ mat-sidenav-container {
 }
 
 
+
+
 /* Utilizzati per margini box contatti */ 
 .margin_left {
     margin-left: 50px;
@@ -284,11 +262,39 @@ mat-sidenav-container {
     margin-right: 50px;
 }
 
-
-
 [contenteditable="true"] {
   caret-color: transparent;
 }
+
+
+
+
+/* Social Links */
+.social__wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.social__links {
+    width: 32px; 
+    height: 32px;  
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+
+.social__instagram_icon {
+    color: rgb(197, 54, 164)
+}
+
+.social__facebook_icon {
+    color: rgb(59, 89, 152)
+}
+
+.social__img {
+    width: 32px;
+    height: 32px;
+}
+
 
 
 
@@ -314,6 +320,10 @@ mat-expansion-panel.mat-expanded {
     border-bottom: 3px solid var(--primary-color) !important;
 }
 
+
+
+
+/* Usati in Animate_on_Scroll.ts */
 .animate_fade_left {
     animation: fadeLeft 0.6s ease-out forwards;
 }
@@ -335,7 +345,7 @@ mat-expansion-panel.mat-expanded {
 
 @keyframes fadeUp {
   from {
-    
+    opacity: 0;
     transform: translateY(20vh);
   }
   to {
@@ -345,29 +355,19 @@ mat-expansion-panel.mat-expanded {
 }
 
 
-/* Animations */
-@keyframes AnimateDirective {
-    0% {
-        right: 1000px;
-    }
 
-    100% {
-        right: 0px;
-    }
-}
-
-
-@keyframes HomeTitleBoxAnimation {
+/* Slide Down titoli pagine */
+@keyframes HomepageTitleBoxAppear {
     from {
-        height: 0%;
+        height: 0px;
     }
 
     to {
-        height: 70%;
+        height: 40vh;
     }
 }
 
-@keyframes HomeTitleAnimation {
+@keyframes HomepageTitleAppear {
     from {
         opacity: 0;
     }

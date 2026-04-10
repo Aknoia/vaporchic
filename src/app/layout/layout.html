@@ -3,13 +3,24 @@
 <!-- Mobile Sidebar -->
 <mat-sidenav-container>
 
+    
     <!-- MATERIAL DRAWER -->
     <mat-sidenav #sidenav mode="side" opened="false">
         <app-sidebar></app-sidebar>
     </mat-sidenav>
 
+
     <mat-sidenav-content>
         <main class="main">
+
+            @if ((isLoading$ | async)) {
+                <div class="splash-screen">
+                    <div class="loader">
+                        <div class="spinner"></div>
+                        <p class="loader__text">Caricamento in corso...</p>
+                    </div>
+                </div>
+            }
 
             <!-- Top Navigation Bar -->
             <app-navbar class="app__navbar"></app-navbar>
@@ -17,13 +28,14 @@
             <app-infobar></app-infobar>
 
             <!-- Floating BTN -->
-            <a href="tel:+39344-119-4955" class="layout__floating_btn">
-                <img class="layout__floating_img" src="assets/icons/chiama.png" alt="Chiamaci al numero" >
+            <a href="https://api.whatsapp.com/send?phone=3887236826" class="layout__floating_btn">
+                <img class="layout__floating_img" src="assets/icons/whatsapp.webp" alt="Chiamaci al numero" >
             </a>
+
     
 
             <!-- Router -->
-            <section class="content">
+            <section class="content" (click)="closeMenu()">
                 <router-outlet>
                     
                 </router-outlet>

@@ -2,132 +2,167 @@
 <mat-nav-list>
     <aside style="position: fixed;top: 0;height: 100vh; height: 100dvh;overflow: auto;">
         <div class="sidebar__header">
-            <img class="sidebar__logo" src="assets/images/logoblu.png">
+            <img class="sidebar__logo" src="assets/images/logoblu.webp">
 
             <button class="sidebar__close_btn" (click)="closeMenu()">X</button>
         </div>
 
-        <a mat-list-item class="sidebar__item" routerLink="/home" (click)="closeMenu()">
-            <img class="sidebar__btn_img" src="assets/icons/homepage.png">
+        <a mat-list-item class="sidebar__item" href="/" routerLink="/" (click)="closeMenu()">
+            <img class="sidebar__btn_img" src="assets/icons/homepage.webp">
             
             <p class="sidebar__title">Home</p>
         </a>
 
 
-        <a mat-list-item class="sidebar__item" routerLink="/chi-siamo" (click)="closeMenu()">
-            <img class="sidebar__btn_img" src="assets/icons/team.png">
+        <a mat-list-item class="sidebar__item" href="/chi-siamo/" routerLink="/chi-siamo/" (click)="closeMenu()">
+            <img class="sidebar__btn_img" src="assets/icons/team.webp">
 
             <p class="sidebar__title">Chi Siamo</p>
         </a>
 
-
-        <a mat-list-item class="sidebar__item" [matMenuTriggerFor]="menu_servizi">
-            <img class="sidebar__btn_img" src="assets/icons/servizipulizia64x64.png">
-
-            <p class="sidebar__title">Servizi</p>
-        </a>
-
-
-        <a mat-list-item class="sidebar__item" routerLink="/gallery" (click)="closeMenu()">
-            <img class="sidebar__btn_img" src="assets/icons/galleria.png">
+        <a mat-list-item class="sidebar__item" href="/gallery/" routerLink="/gallery/" (click)="closeMenu()">
+            <img class="sidebar__btn_img" src="assets/icons/galleria.webp">
 
             <p class="sidebar__title">Galleria</p>
         </a>
 
 
-        <a mat-list-item class="sidebar__item" routerLink="/contatti" (click)="closeMenu()">
-            <img class="sidebar__btn_img" src="assets/icons/contattaci.png">
+        <a mat-list-item class="sidebar__item" href="/contatti/" routerLink="/contatti/" (click)="closeMenu()">
+            <img class="sidebar__btn_img" src="assets/icons/contattaci.webp">
 
             <p class="sidebar__title">Contattaci</p>
         </a>
+        
+
+        <div class="sidebar__divider"></div>
+
+        <p class="sidebar__title_servizi">Servizi</p>
 
 
-        <mat-menu #menu_servizi="matMenu" class="navbar__menu" panelClass="navbar__menu">
-            <!-- Autovetture -->
-            <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/0" (click)="closeMenu()">
-                <mat-icon class="navbar__menu_icon">directions_car</mat-icon>
-                <span class="navbar__menu_label">Autovetture</span>
-            </button>
+        <!-- Autovetture-->
+        <div class="sidebar__wrapper_servizi" href="/servizio/autovetture/" routerLink="/servizio/autovetture/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">directions_car</mat-icon>
+            <span class="sidebar__servizio_title">Autovetture</span>
+        </div>
 
-            <!-- Camper -->
-            <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/9" (click)="closeMenu()">
-                <mat-icon class="navbar__menu_icon">airport_shuttle</mat-icon>
-                <span class="navbar__menu_label">Camper</span>
-            </button>
+        <!-- Car Detailing -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/cardetailing/" routerLink="/servizio/cardetailing/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">directions_car</mat-icon>
+            <span class="sidebar__servizio_title">Car Detailing</span>
+        </div>
 
-            <!-- Imbarazioni -->
-            <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/1" (click)="closeMenu()">
-                <mat-icon class="navbar__menu_icon">directions_boat</mat-icon>
-                <span class="navbar__menu_label">Imbarcazioni</span>
-            </button>
 
-            <!-- Divani e Poltrone -->
-            <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/2" (click)="closeMenu()">
-                <mat-icon class="navbar__menu_icon">chair</mat-icon>
-                <span class="navbar__menu_label">Divani e Poltrone</span>
-            </button>
+        <!-- Camper -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/camper/" routerLink="/servizio/camper/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">airport_shuttle</mat-icon>
+            <span class="sidebar__servizio_title">Camper</span>
+        </div>
 
-            <!-- Materassi -->
-            <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/3" (click)="closeMenu()">
-                <mat-icon class="navbar__menu_icon">airline_seat_individual_suite</mat-icon>
-                <span class="navbar__menu_label">Materassi</span>
-            </button>
-            
-            <!-- Tappeti -->
-            <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/4" (click)="closeMenu()">
-                <mat-icon class="navbar__menu_icon">receipt</mat-icon>
-                <span class="navbar__menu_label">Tappeti</span>
-            </button>
 
-            <!-- Locali Commerciali, Uffici e Negozi -->
-            <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/5" (click)="closeMenu()">
-                <mat-icon class="navbar__menu_icon">business_center</mat-icon>
-                <span class="navbar__menu_label">Locali Commerciali, Uffici e Negozi</span>
-            </button>
+        <!-- Imbarcazioni -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/imbarcazioni/" routerLink="/servizio/imbarcazioni/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">directions_boat</mat-icon>
+            <span class="sidebar__servizio_title">Imbarcazioni</span>
+        </div>
 
-            <!-- Condomini, Villette e Case Vacanze  -->
-            <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/6" (click)="closeMenu()">
-                <mat-icon class="navbar__menu_icon">home</mat-icon>
-                <span class="navbar__menu_label">Abitazioni, Villette e Case Vacanze</span>
-            </button>
-            
-            <!-- Animali -->
-            <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/7" (click)="closeMenu()">
-                <mat-icon class="navbar__menu_icon">pets</mat-icon>
-                <span class="navbar__menu_label">Animali</span>
-            </button>
 
-            <!-- Ambientale -->
-            <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/8" (click)="closeMenu()">
-                <mat-icon class="navbar__menu_icon">family_restrooms</mat-icon>
-                <span class="navbar__menu_label">Ambienti</span>
-            </button>
+        <!-- Divani, Poltrone e Sedie -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/divani/" routerLink="/servizio/divani/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">chair</mat-icon>
+            <span class="sidebar__servizio_title">Divani, Poltrone e Sedie</span>
+        </div>
 
-            <!-- Ambientale -->
-            <button mat-menu-item class="navbar__menu_button" routerLink="/servizio/10" (click)="closeMenu()">
-                <mat-icon class="navbar__menu_icon">local_fire_department</mat-icon>
-                <span class="navbar__menu_label">Incendi</span>
-            </button>
-        </mat-menu>
+
+        <!-- Materassi -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/materassi/" routerLink="/servizio/materassi/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">airline_seat_individual_suite</mat-icon>
+            <span class="sidebar__servizio_title">Materassi</span>
+        </div>
+
+
+        <!-- Tappeti -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/tappeti/" routerLink="/servizio/tappeti/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">receipt</mat-icon>
+            <span class="sidebar__servizio_title">Tappeti</span>
+        </div>
+
+
+        <!-- Tappezzeria -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/tappezzeria/" routerLink="/servizio/tappezzeria/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">event_seat</mat-icon>
+            <span class="sidebar__servizio_title">Tappezzeria</span>
+        </div>
+
+
+        <!-- Locali Commerciali, Uffici e Negozi -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/locali/" routerLink="/servizio/locali/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">business_centre</mat-icon>
+            <span class="sidebar__servizio_title">Locali Commerciali, Uffici e Negozi</span>
+        </div>
+
+
+        <!-- Abitazioni, Villette e Case Vacanze -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/abitazioni/" routerLink="/servizio/abitazioni/" (click)="closeMenu()">  
+            <mat-icon class="sidebar__servizio_icon">home</mat-icon>
+            <span class="sidebar__servizio_title">Abitazioni, Villette e Case Vacanze</span>
+        </div>
+
+
+        <!-- Animali, Urina e Vomito -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/animali/" routerLink="/servizio/animali/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">pets</mat-icon>
+            <span class="sidebar__servizio_title">Animali, Urina e Vomito</span>
+        </div>
+
+
+        <!-- Ambienti -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/ambienti/" routerLink="/servizio/ambienti/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">family_restrooms</mat-icon>
+            <span class="sidebar__servizio_title">Ambienti</span>
+        </div>
+
+
+        <!-- Incendi -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/incendi/" routerLink="/servizio/incendi/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">local_fire_department</mat-icon>
+            <span class="sidebar__servizio_title">Incendi</span>
+        </div>
+
+
+        <!-- Tende da Sole e Gazebi -->
+        <div class="sidebar__wrapper_servizi" href="/servizio/tendedasole/" routerLink="/servizio/tendedasole/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">sunny</mat-icon>
+            <span class="sidebar__servizio_title">Tende da Sole e Gazebi</span>
+        </div>
+    
+        <div class="sidebar__wrapper_servizi" href="/servizio/puliziastraordinaria/" routerLink="/servizio/puliziastraordinaria/" (click)="closeMenu()">
+            <mat-icon class="sidebar__servizio_icon">clean_hands</mat-icon>
+            <span class="sidebar__servizio_title">Pulizia Straordinaria</span>
+        </div>
+        
+
+
+        
+
 
         <!-- Social Buttons -->
         <div class="sidebar__social_wrapper">
 
             <!-- Whatsapp -->
             <a class="sidebar__social_link" title="whatsapp" target="_blank" href="https://api.whatsapp.com/send?phone=3887236826">
-                <img src="assets/icons/whatsapp.png" style="width: 32px; height: 32px;" />
+                <img src="assets/icons/whatsapp.webp" style="width: 32px; height: 32px;" />
             </a>
 
 
             <!-- Youtube -->
             <a class="sidebar__social_link" title="youtube" target="_blank" href="https://www.youtube.com/@VAPORCHIC?app=desktop">
-                <img src="assets/icons/youtube.png" style="width: 32px; height: 32px;" />
+                <img src="assets/icons/youtube.webp" style="width: 32px; height: 32px;" />
             </a>
 
 
             <!-- Tiktok -->
             <a class="sidebar__social_link" title="tiktok" target="_blank" href="https://www.tiktok.com/@vaporchic?is_from_webapp=1&sender_device=pc">
-                <img src="assets/icons/tiktok.png" style="width: 32px; height: 32px;" />
+                <img src="assets/icons/tiktok.webp" style="width: 32px; height: 32px;" />
             </a>
 
 

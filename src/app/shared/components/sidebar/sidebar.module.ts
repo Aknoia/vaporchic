@@ -7,8 +7,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
 import { RouterLink } from "@angular/router"; 
 
-import { SidenavService } from "@app/services/sidenav";
-
+import { SidenavService } from "@app/services/sidenavSrv/sidenav";
 
 @Component({
     selector: 'app-sidebar',

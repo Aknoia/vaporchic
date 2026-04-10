@@ -56,13 +56,8 @@ export class AnimateOnScrollDirective implements AfterViewInit, OnDestroy {
           
 
           this.el.nativeElement.getBoundingClientRect();
-
-            console.log(this.animation)
-            //this.el.nativeElement.classList.add('animate_directive');
-            this.el.nativeElement.classList.add('animate_' + `${this.animation}`);
+          this.el.nativeElement.classList.add('animate_' + `${this.animation}`);
           
-            console.log(this.el.nativeElement.classList);
-
           this.observer.disconnect(); // anima UNA volta
         }
       },

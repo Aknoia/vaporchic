@@ -13,6 +13,10 @@
     margin-left: 1rem;
 }
 
+.navbar__social_wrapper {
+    display: flex;
+}
+
 .navbar__nav_list {
     display: flex;
     flex-direction: row;
@@ -115,33 +119,6 @@
     color: var(--text-color) !important;
 }
 
-/* Social Buttons */
-.navbar__social_wrapper {
-    width: 168px;
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: 8%;
-    align-items: center;
-}
-
-.navbar__social_link {
-    width: 32px;   
-    height: 100%;
-    margin-top: 2rem;
-}
-
-.navbar__instagram_icon {
-    color: rgb(197, 54, 164)
-}
-
-.navbar__facebook_icon {
-    color: rgb(59, 89, 152)
-}
-
 .navbar__mobile_wrapper {
     display: none;
 }
@@ -176,6 +153,7 @@
 
 
 /* Different Screens */
+
 @media (min-width: 1200px) and (max-width: 1900px) {
     .navbar__logo_group {
         width: 30%;
@@ -184,7 +162,15 @@
 
 @media (max-width: 1750px) {
     .navbar__nav_button {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 1360px) {
+    .navbar__nav_list {
+        margin-top: 1.6rem;
     }
 }
 
@@ -199,10 +185,12 @@
 
     .navbar__nav_wrapper {
         margin-left: 4%;
+        display: flex;
+        padding-bottom: 1rem;
     }
 
     .navbar__nav_button {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         margin-left: 0px;
     }
 
@@ -226,6 +214,10 @@
 
 
 @media (max-width: 992px) {
+    .navbar__social_wrapper {
+        display: none !important; 
+    }
+
     .navbar__logo_group {
         width: 35%;
     }
@@ -235,6 +227,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-bottom: 0px;
     }
 
     .navbar__social_wrapper {
@@ -258,6 +251,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-right: 2rem;
     }
 
     .navbar__menu_btn_icon {
@@ -287,7 +281,9 @@
 
 @media (min-width: 320px) and (max-width: 575px) {
     .navbar__nav_wrapper {
-        margin-left: 8%;
+        margin-left: auto;
+        margin-right: 0px;
+        margin-top: 0px;
     }
 
     .navbar__social_wrapper {
@@ -295,11 +291,15 @@
     }
 
     .navbar__logo_group {
-        width: 70%;
+        display: flex;
     }
 
     .navbar__contact_item {
         font-size: 0.6rem;
+    }
+
+    .social__links {
+        margin-top: 0.9rem;
     }
 }
 

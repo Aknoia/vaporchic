@@ -4,7 +4,7 @@
 
 
         <div style="display: flex;flex-direction: row;">
-            <img src="assets/icons/star.png" alt="Stella"/>
+            <img src="assets/icons/star.webp" alt="Stella" appTrackLoad/>
             <h1 class="gallery__uptitle">Gallery, I Nostri Lavori</h1>
         </div>
 
@@ -35,12 +35,12 @@
             @for (foto of galleria[currTab]; track foto) {
 
                 <div class="gallery__photo_box" animate.enter="gallery__photo_enter_animation" animate.leave="gallery__photo_leave_animation">
-                    @if (foto.includes('png') || foto.includes('gif') || foto.includes('jpg') || foto.includes('jpeg')) {
-                        <img class="gallery__photo" [src]="foto" [alt]="$index"/>
+                    @if (foto.includes('png') || foto.includes('gif') || foto.includes('jpg') || foto.includes('jpeg') || foto.includes('webp'))  {
+                        <img class="gallery__photo" [src]="foto" [alt]="$index" appTrackLoad/>
                     }
 
                     
-                    @if (foto.includes('mp4')) {
+                    @if (foto.includes('mp4') || foto.includes('webm')) {
                         <video class="gallery__photo" controls>
                             <source src="{{foto}}" type="video/mp4">
                             Your browser does not support the video tag.

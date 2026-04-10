@@ -12,6 +12,10 @@ export class SidenavService {
     this.sidenav = sidenav;
   }
 
+  public isOpen(): boolean {
+    return this.sidenav.opened;
+  }
+
   public open() {
     this.sidenav.open();
   }

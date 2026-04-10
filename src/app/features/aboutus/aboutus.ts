@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 
+import { SeoService } from '@app/services/seoSrv/seo';
+
 @Component({
   selector: 'app-aboutus',
   imports: [],
@@ -11,17 +13,20 @@ import { Meta, Title } from '@angular/platform-browser';
 
 export class Aboutus {
 
-  constructor(private route: ActivatedRoute, private title: Title, private meta: Meta) {
+  constructor(private seo: SeoService, private route: ActivatedRoute, private title: Title, private meta: Meta) {
     console.log('About Us Init');
   }
 
   ngOnInit() {
       const data = this.route.snapshot.data;
 
-      this.title.setTitle(data['title']);
-      this.meta.updateTag({
-          name: 'description',
-          content: data['description']
+      this.seo.updateSEO({
+          title: data['title'],
+          description: data['description'],
+          siteName: data['siteName'],
+          keywords: data['keywords'],
+          url: data['url'],
+          image: data['image']
       });
   }
 }

@@ -40,4 +40,8 @@
     .footer__contacts_span, .footer__contacts_p {
         font-size: 0.75rem;    
     }    
+
+    .footer__contacts_wrapper {
+        text-align: center;
+    }
 }

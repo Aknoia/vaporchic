@@ -16,6 +16,8 @@ export class CustomUrlSerializer extends DefaultUrlSerializer {
             }
         }
 
+        
+
         return pathArr.join(splitOn);
     }
 }

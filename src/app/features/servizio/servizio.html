@@ -3,15 +3,16 @@
 
     <section class="servizio__title_section">
         
-        <div class="servizio__title_wrapper">
+        <div class="servizio__title_wrapper" id="section-title">
 
-            @if (servizio.background.includes('mp4')) {
-                <video style="width: 100%;max-height: 45vh;" controls>
-                    <source  src="{{servizio.background}}" type="video/mp4">
+            @if (servizio.background.includes('webm')) {
+                <video style="width: 100%;max-height: 45vh;" autoplay muted loop>
+                    <source  src="{{servizio.background}}" type="video/webm">
+                    <track kind="captions" label="Servizio Video Background">  
                     Your browser does not support the video tag.
                 </video>
             } @else {
-                <img class="servizio__background" [src]="servizio.background">
+                <img class="servizio__background" [src]="servizio.background" alt="Immagine Background" fetchpriority="high" appTrackLoad>
             }
             
 
@@ -20,12 +21,14 @@
             </div>
         </div>
         
-        <article class="servizio__section">
+
+        <!-- Section 1-->
+        <article id="section-1" class="servizio__section" animateOnScroll="fade_left">
             <div class="servizio__section_title_wrapper">
-                <img class="servizio__section_img" [src]="servizio.section1.img">
+                <img class="servizio__section_img" [src]="servizio.section1.img" alt="Immagine Laterale Servizio Sezione 1" appTrackLoad>
 
                 <div class="servizio__section_wrapper_txt">
-                    <p class="servizio__section_title" [innerHTML]="servizio.section1.title"></p>
+                    <h2 class="servizio__section_title" [innerHTML]="servizio.section1.title"></h2>
                     <p class="servizio__section_description" [innerHTML]="servizio.section1.description"></p>
                 </div>
             </div>
@@ -33,16 +36,18 @@
 
             <p class="servizio__section_undertext" [innerHTML]="servizio.section1.underText"></p>
 
+            <img class="servizio__section_img_mobile" [src]="servizio.section1.img" alt="Immagine Laterale Servizio Sezione 1" appTrackLoad>
         </article>
 
 
-
-        <article class="servizio__section">
+        <!-- Section 2 -->
+        @if (servizio.section2.title.length > 0) {
+        <article id="section-2" class="servizio__section" animateOnScroll="fade_left">
             <div class="servizio__section_title_wrapper servizio__section_title_wrapper_reverse">
-                <img class="servizio__section_img servizio__section_img2" [src]="servizio.section2.img">
+                <img class="servizio__section_img servizio__section_img2" [src]="servizio.section2.img"alt="Immagine Laterale Servizio Sezione 2" appTrackLoad>
 
                 <div class="servizio__section_wrapper_txt">
-                    <p class="servizio__section_title servizio__section_title2" [innerHTML]="servizio.section2.title"></p>
+                    <h2 class="servizio__section_title servizio__section_title2" [innerHTML]="servizio.section2.title"></h2>
                     <p class="servizio__section_description servizio__section_description2" [innerHTML]="servizio.section2.description"></p>
                 </div>
             </div>
@@ -50,16 +55,20 @@
 
             <p class="servizio__section_undertext" [innerHTML]="servizio.section2.underText"></p>
 
+            <img class="servizio__section_img_mobile" [src]="servizio.section2.img" alt="Immagine Laterale Servizio Sezione 2" appTrackLoad>
         </article>
+        }
+        
 
 
+        <!-- Section 4 -->
         @if (servizio.section4) {
-            <article class="servizio__section">
+            <article id="section-4" class="servizio__section" animateOnScroll="fade_left" >
                 <div class="servizio__section_title_wrapper">
-                    <img class="servizio__section_img" [src]="servizio.section4.img">
+                    <img class="servizio__section_img" [src]="servizio.section4.img" alt="Immagine Laterale Servizio Sezione 4" appTrackLoad>
 
                     <div class="servizio__section_wrapper_txt">
-                        <p class="servizio__section_title" [innerHTML]="servizio.section4.title"></p>
+                        <h2 class="servizio__section_title" [innerHTML]="servizio.section4.title"></h2>
                         <p class="servizio__section_description" [innerHTML]="servizio.section4.description"></p>
                     </div>
                 </div>
@@ -67,35 +76,74 @@
 
                 <p class="servizio__section_undertext" [innerHTML]="servizio.section4.underText"></p>
 
+                <img class="servizio__section_img_mobile" [src]="servizio.section4.img" alt="Immagine Laterale Servizio Sezione 4" appTrackLoad>
+            </article>
+        }
+
+
+        <!-- Section 5 -->
+        @if (servizio.section5) {
+            <article id="section-5" class="servizio__section" animateOnScroll="fade_left">
+                <div class="servizio__section_title_wrapper servizio__section_title_wrapper_reverse">
+                    <img class="servizio__section_img" [src]="servizio.section5.img" alt="Immagine Laterale Servizio Sezione 4" appTrackLoad>
+
+                    <div class="servizio__section_wrapper_txt">
+                        <h2 class="servizio__section_title" [innerHTML]="servizio.section5.title"></h2>
+                        <p class="servizio__section_description" [innerHTML]="servizio.section5.description"></p>
+                    </div>
+                </div>
+                
+
+                <p class="servizio__section_undertext" [innerHTML]="servizio.section5.underText"></p>
+
+                <img class="servizio__section_img_mobile" [src]="servizio.section5.img" alt="Immagine Laterale Servizio Sezione 5" appTrackLoad>
             </article>
         }
 
 
 
-        <article class="servizio__section3">
-            <p class="servizio__section3_title" [innerHTML]="servizio.section3.title"></p>
-            <p class="servizio__section3_description" [innerHTML]="servizio.section3.description"></p>
 
-            <p class="servizio__table_title" [innerHTML]="servizio.tableTitle"></p>
-            <ul class="servizio__table">
-                @for (entry of servizio.table; track entry) {
-                    <li class="servizio__table_entry">{{entry}}</li>
-                }
-            </ul>
-        </article>
+        <!-- Section 6 -->
+        @if (servizio.section6) {
+            <article id="section-6" class="servizio__section" animateOnScroll="fade_left">
+                <div class="servizio__section_title_wrapper">
+                    <img class="servizio__section_img" [src]="servizio.section6.img" alt="Immagine Laterale Servizio Sezione 4" appTrackLoad>
+
+                    <div class="servizio__section_wrapper_txt">
+                        <h2 class="servizio__section_title" [innerHTML]="servizio.section6.title"></h2>
+                        <p class="servizio__section_description" [innerHTML]="servizio.section6.description"></p>
+                    </div>
+                </div>
+                
+
+                <p class="servizio__section_undertext" [innerHTML]="servizio.section6.underText"></p>
+
+                <img class="servizio__section_img_mobile" [src]="servizio.section6.img" alt="Immagine Laterale Servizio Sezione 6" appTrackLoad>
+            </article>
+        }
 
 
-        <article class="servizio__plans_wrapper">
+
+
+
+        <div class="collab__title_wrapper" animateOnScroll="fade_left">
+            
+            <h2 class="collab__title">PREZZI E PIANI</h2>
+            
+        </div>
+
+        <article id="section-plans" class="servizio__plans_wrapper" animateOnScroll="fade_left">
 
             @if (servizio.preventivo) {
-                <p class="servizio__preventivo">Contattaci per Avere un Preventivo!</p>
+                <button class="servizio__preventivo" routerLink="/contatti">CONTATTACI PER AVERE UN PREVENTIVO!</button>
             }
 
             @for (plan of servizio.prices; track plan) {
                 <div class="servizio__plan_box">
 
+                    
                     @if (plan.icon) {
-                        <img class="servizio__plan_icon" src="assets/icons/mansardato.png" alt="Camper Mansardato"/>
+                        <img class="servizio__plan_icon" [src]="plan.icon" alt="Camper Mansardato" appTrackLoad/>
                     }
 
                     <p class="servizio__plan_name">{{plan.name}}</p>
@@ -111,7 +159,7 @@
 
         @if (servizio.tabellaAuto == true) {
             <!-- Tabella Prezzi Desktop -->
-            <article class="servizio_article_tabella_auto">
+            <article class="servizio_article_tabella_auto" animateOnScroll="fade_left">
                 <div class="servizio__tabella_prezzi_auto">
 
                     <div class="servizio__checkbox_border">
@@ -264,14 +312,14 @@
                 <div class="servizio__table_auto_mobile">
 
                     <div class="services__card_mobile">
-                        <p class=" services__card_title">Lavaggio Basic Chic</p>
+                        <p class="services__card_title">Lavaggio Basic Chic</p>
 
-                        <p class=" services__card_descr">Pulizia ed Aspirazione Dettagliata Interni</p>
-                        <p class=" services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio Esterno con Prodotti Waterless</p>
+                        <p class="services__card_descr">Pulizia ed Aspirazione Dettagliata Interni</p>
+                        <p class="services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio Esterno con Prodotti Waterless</p>
 
                         
-                        <div class="explosion2">
-                            <p class="   services__prezzo_mobile">A Partire da<br><span class="highlight_txt_green">50€</span></p>
+                        <div class="explosion">
+                            <p class="services__prezzo_mobile">A Partire da<br><span class="highlight_txt_green">50€</span></p>
                         </div>
                         
                         
@@ -286,31 +334,31 @@
                         <p class=" services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio condotti A/C e Sanificazione ad Ozono</p>
 
                         <div class="services__attention_box" style="margin-top: 1rem;margin-bottom: 2rem;">
-                            <img class="services__attention_icon" src="assets/icons/warning.png">
-                            <p class=" services__article_warnig_materassi" style="margin-top: 0.5rem;">Necessario Punto acqua</p>
+                            <img class="services__attention_icon" alt="" src="assets/icons/warning.webp" appTrackLoad>
+                            <p class="services__article_warnig_materassi" style="margin-top: 0.5rem;">Necessario Punto acqua</p>
                         </div>
 
-                        <div class="explosion2">
-                            <p class="   services__prezzo_mobile">A Partire da<br><span class="highlight_txt_green">80€</span></p>
+                        <div class="explosion">
+                            <p class="services__prezzo_mobile">A Partire da<br><span class="highlight_txt_green">80€</span></p>
                         </div>
                     </div>
 
                     <div class="services__card_mobile">
-                        <p class=" services__card_title">Lavaggio Deluxe Chic</p>
+                        <p class="services__card_title">Lavaggio Deluxe Chic</p>
 
-                        <p class=" services__card_descr">Pulizia ed Aspirazione Dettagliata Interni</p>
-                        <p class=" services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio Esterno con Prodotti Waterless</p>
-                        <p class=" services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio condotti A/C e Sanificazione ad Ozono</p>
-                        <p class=" services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio Sedili e Moquette</p>
+                        <p class="services__card_descr">Pulizia ed Aspirazione Dettagliata Interni</p>
+                        <p class="services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio Esterno con Prodotti Waterless</p>
+                        <p class="services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio condotti A/C e Sanificazione ad Ozono</p>
+                        <p class="services__card_descr"><span class="highlight_txt_green">+</span> Lavaggio Sedili e Moquette</p>
 
                         <div class="services__attention_box" style="margin-top: 1rem;margin-bottom: 2rem;">
-                            <img class="services__attention_icon" src="assets/icons/warning.png">
-                            <p class=" services__article_warnig_materassi" style="margin-top: 0.5rem;">Necessario Punto acqua</p>
+                            <img class="services__attention_icon" alt="" src="assets/icons/warning.webp" appTrackLoad>
+                            <p class="services__article_warnig_materassi" style="margin-top: 0.5rem;">Necessario Punto acqua</p>
                         </div>
                         
 
-                        <div class="explosion2">
-                            <p class="   services__prezzo_mobile">A Partire da<br><span class="highlight_txt_green">150€</span></p>
+                        <div class="explosion">
+                            <p class="services__prezzo_mobile">A Partire da<br><span class="highlight_txt_green">150€</span></p>
                         </div>
                     </div>
                 </div>
@@ -318,19 +366,32 @@
         }
 
 
+        <article class="servizio__section3" animateOnScroll="fade_left">
+            <h3 class="collab__title" [innerHTML]="servizio.section3.title"></h3>
+            <p class="servizio__section3_description" [innerHTML]="servizio.section3.description"></p>
+
+            <p class="servizio__table_title" [innerHTML]="servizio.tableTitle"></p>
+            <ul class="servizio__table">
+                @for (entry of servizio.table; track entry) {
+                    <li class="servizio__table_entry">{{entry}}</li>
+                }
+            </ul>
+        </article>
 
 
-        <div class="servizio__media_wrapper">            
+        <div id="section-videos" class="servizio__media_wrapper" animateOnScroll="fade_left">            
             @if ((servizio.video1.length)) {
                 <video [src]="servizio.video1" class="servizio__video" controls>
-                    <source type="video/mp4">
+                    <source type="video/webm">
+                    <track kind="captions" label="Servizio Video 1">  
                     Your browser does not support the video tag.
                 </video>
             }
 
             @if ((servizio.video2.length)) {
                 <video [src]="servizio.video2" class="servizio__video" controls>
-                    <source type="video/mp4">
+                    <source type="video/webm">
+                    <track kind="captions" label="Servizio Video 2">  
                     Your browser does not support the video tag.
                 </video>
             }
@@ -338,18 +399,30 @@
 
             @if ((servizio.video3)) {
                 <video [src]="servizio.video3" class="servizio__video" controls>
-                    <source type="video/mp4">
+                    <source type="video/webm">
+                    <track kind="captions" label="Servizio Video 3">  
                     Your browser does not support the video tag.
                 </video>
             }
 
             @if ((servizio.video4)) {
                 <video [src]="servizio.video4" class="servizio__video" controls>
-                    <source type="video/mp4">
+                    <source type="video/webm">
+                    <track kind="captions" label="Servizio Video 4">  
+                    Your browser does not support the video tag.
+                </video>
+            }
+
+            @if ((servizio.video5)) {
+                <video [src]="servizio.video5" class="servizio__video" controls>
+                    <source type="video/webm">
+                    <track kind="captions" label="Servizio Video 5">  
                     Your browser does not support the video tag.
                 </video>
             }
         </div>
+
+        <h4 [innerHTML]="staticText" class="servizio__section_description highlight_txt2 servizio__static_txt"></h4>
         
     </section>
 

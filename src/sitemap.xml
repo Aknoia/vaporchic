@@ -9,33 +9,117 @@
     </url>
 
     <url>
-        <loc>https://www.garage18.it/home</loc>
+        <loc>https://www.garage18.it/home/</loc>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://www.garage18.it/servizi</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.garage18.it/chi-siamo</loc>
+        <loc>https://www.garage18.it/chi-siamo/</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://www.garage18.it/contatti</loc>
+        <loc>https://www.garage18.it/contatti/</loc>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
-        <loc>https://www.garage18.it/gallery</loc>
+        <loc>https://www.garage18.it/gallery/</loc>
         <changefreq>daily</changefreq>
         <priority>0.4</priority>
     </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/autovetture/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/camper/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/imbarcazioni/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/divani/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/materassi/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/tappeti/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/locali/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/abitazioni/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/animali/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/ambienti/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/incendi/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
     
+    <url>
+        <loc>https://www.garage18.it/servizio/tappezzeria/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/puliziastraordinaria/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/tendedasole/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.garage18.it/servizio/cardetailing/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
+

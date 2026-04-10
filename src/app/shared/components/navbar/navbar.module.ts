@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterLink } from "@angular/router";
 
-import { SidenavService } from "@app/services/sidenav";
+import { SidenavService } from "@app/services/sidenavSrv/sidenav";
 
 @Component({
     selector: 'app-navbar',
